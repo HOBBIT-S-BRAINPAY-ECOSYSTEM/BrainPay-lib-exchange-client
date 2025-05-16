@@ -1,0 +1,25 @@
+# phpstan.neon
+parameters:
+  level: max
+  paths:
+    - src
+    - app
+    - lib
+    - tests
+  excludePaths:
+    analyse:
+      - tests/_support/*
+      - vendor/*
+      - tmp/*
+      - storage/*
+  inferPrivatePropertyTypeFromConstructor: true
+
+  checkMissingIterableValueType: true
+  checkGenericClassInNonGenericObjectType: true
+  checkMissingVarTagTypehint: true
+  checkExplicitMixed: true
+  checkUnionTypes: true
+  reportUnmatchedIgnoredErrors: true
+
+  # If you use Composer autoload
+  autoload
